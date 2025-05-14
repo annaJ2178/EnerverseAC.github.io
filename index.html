@@ -212,6 +212,26 @@
 <!-- End image carousel -->
 
 
+<section class="Model">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">EVAC Model</h2>
+
+      <img src="static/images/figure_model.png" />
+      <div class="content">
+        <p>
+          Robotic imitation learning has advanced from solving static tasks to addressing dynamic interaction scenarios, but testing and evaluation remain costly and challenging due to the need for real-time interaction with dynamic environments. We propose EnerVerse-AC(abbr. EVAC), an action-conditional world model that generates future visual observations based on an agent’s predicted actions, enabling realistic and controllable robotic inference. Building on prior architectures, EVAC introduces a multi-level action-conditioning mechanism and ray map encoding for dynamic multi-view image generation while expanding training data with diverse failure trajectories to improve generalization. As both a data engine and evaluator, EVAC augments human-collected trajectories into diverse datasets and generates realistic, action-conditioned video observations for policy testing, eliminating the need for physical robots or complex simulations. This approach significantly reduces costs while maintaining high fidelity in robotic manipulation evaluation. Extensive experiments validate the effectiveness of our method. Code, checkpoints, and datasets will be released.
+          <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit. -->
+        </p>
+      <h2 class="subtitle has-text-centered">
+
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Multi-view generation -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -275,219 +295,6 @@
 </section>
 
 
-<section class="comparison">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Ablation</h2>
-      
-      <div class="content has-text-justified">
-        <p>EVAC with delta attention module can successfully learn the dynamics.</p>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>With delta action module</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/cmp_cross_attn/with_ca/v2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Without delta action module</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/cmp_cross_attn/wo_ca/v2.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="content has-text-justified">
-        <p>EVAC with failure data as dataset can successfully mimic the realistic.</p>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>With failure data</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/cmp_fail_data/v1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Without failure data</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/cmp_fail_data/video_without_failure_data.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-</section>
-
-
-
-<section class="Reliablity and consistency via real-world and simulation experiments">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Reliablity and consistency via real-world and simulation experiments</h2>
-
-      <div class="content has-text-justified">
-        <p>EVAC simulated in Libero </p>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>Rollout 1 in EVAC</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_pd_v1_1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Rollout 1 in Libero</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_gt_v_1.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>Rollout 2 in EVAC</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_pd_v2_1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Rollout 2 in Libero</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_gt_v_2.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>Rollout 3 in EVAC</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_pd_v3_1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Rollout 3 in Libero</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_gt_v_3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column  has-text-centered">
-          <h2>Rollout 4 in EVAC</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_pd_v4_1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column  has-text-centered">
-          <h2>Rollout 4 in Libero</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/libero_examples/libero_gt_v_4.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-
-
-      <div class="content has-text-justified">
-        <p>Evaluation results comparison</p>
-      </div>
-      
-      <!-- Case 1: Water Bottle (Failure) -->
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column has-text-centered">
-          <h2>Water Bottle Failure (Prediction)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/waterbottle_v2_f.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h2>Water Bottle Failure (Ground Truth)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/waterbottle_v1_f_gt.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      
-      <!-- Case 2: Water Bottle (Success) -->
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column has-text-centered">
-          <h2>Water Bottle Success (Prediction)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/waterbottle_v2_s.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h2>Water Bottle Success (Ground Truth)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/waterbottle_v1_s_gt.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      
-      <!-- Case 3: Lettuce (Failure) -->
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column has-text-centered">
-          <h2>Lettuce Failure (Prediction)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/lettuce_v2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h2>Lettuce Failure (Ground Truth)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/lettuce_v1_gt.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      
-      <!-- Case 4: Toast (Success) -->
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column has-text-centered">
-          <h2>Toast Success (Prediction)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/toast_v2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h2>Toast Success (Ground Truth)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/toast_v1_gt.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      
-      <!-- Case 5: Bacon (Success) -->
-      <div class="columns is-vcentered interpolation-panel">
-        <div class="column has-text-centered">
-          <h2>Bacon Success (Prediction)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/bacon_v2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h2>Bacon Success (Ground Truth)</h2>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/evaluator/bacon_v1_gt.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
-</section>
-
-
-
-
-
-
-
 
 
 
@@ -507,6 +314,41 @@
     </div>
   </section> -->
 <!-- End paper poster -->
+
+
+<section class="Experiments">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Experiments</h2>
+
+      <h3 class="subtitle has-text-centered">
+        EVAC as Policy Evaluator
+
+      </h3>
+      <img src="static/images/figure_exp1.png" />
+
+      <div class="content">
+        <p>
+          Comparison of Success Rates Across Tasks and Training Steps. (Left) Despite tasks vary a lot, the EVAC simulator consistently aligned its evaluation results with real-world ones. (Right) Success rates of a single policy model evaluated at three training steps. Both EVAC and real-world testing demonstrated a similar performance gradient.
+          <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit. -->
+        </p>
+
+      <h3 class="subtitle has-text-centered">
+        EVAC as Data Engine
+
+      </h3>
+      <img src="static/images/figure_exp2.png" />
+      <!-- <img src="static/images/figure_exp3.png" /> -->
+
+      <div class="content">
+        <p>
+          We compare two training setups: (1) Baseline: The policy is trained with only 20 expert demonstration episodes. (2) Augmented Dataset: The policy is trained with the same 20 expert episodes, augmented with 30% additional trajectories generated using the EVAC world model. The success rate (SR) improves significantly from 0.28 to 0.36 when the augmented trajectories are included in the training data.
+        </p>
+
+    </div>
+  </div>
+</section>
+
 
 
 <!--BibTex citation -->

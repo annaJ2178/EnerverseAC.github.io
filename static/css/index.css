@@ -137,7 +137,7 @@ body {
 .videos-stack {
   display: flex;
   flex-direction: column; /* 垂直排列 */
-  gap: 20px; /* 视频之间的垂直间距 */
+  gap: 60px; /* 视频之间的垂直间距 */
 }
 
 .video-item {
